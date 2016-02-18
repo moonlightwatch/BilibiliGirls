@@ -118,6 +118,7 @@ namespace BilibiliGirls
                 {
                     System.Media.SoundPlayer sp = new System.Media.SoundPlayer(kvp.Value);
                     sp.Play();
+                    sp.Dispose();
                 }
             });
             sayThread.Start();
@@ -138,6 +139,7 @@ namespace BilibiliGirls
                 {
                     System.Media.SoundPlayer sp = new System.Media.SoundPlayer(dragingSoundKvp.Value);
                     sp.Play();
+                    sp.Dispose();
                 }
             });
             sayThread.Start();
