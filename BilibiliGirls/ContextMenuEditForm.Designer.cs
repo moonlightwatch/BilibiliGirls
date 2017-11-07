@@ -1,6 +1,6 @@
 ﻿namespace BilibiliGirls
 {
-    partial class Form2
+    partial class ContextMenuEditForm
     {
         /// <summary>
         /// Required designer variable.

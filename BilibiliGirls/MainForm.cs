@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BilibiliGirls
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         /// <summary>
         /// 鼠标位置（用于拖动时的位置计算）
@@ -28,7 +28,7 @@ namespace BilibiliGirls
         private XmlNode rootNode = null;
 
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             //初始化配置文件根节点
@@ -72,7 +72,7 @@ namespace BilibiliGirls
                 {
                     Process.Start(fileName);
                 }
-                catch (Exception exc)
+                catch (Exception)
                 {
                     return;
                 }
@@ -131,7 +131,7 @@ namespace BilibiliGirls
             }
             label1.Text = "";
         }
-        
+
         private void 召唤22娘ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Girl = new Girl_22(imageList, rootNode.ChildNodes[0]);
@@ -153,7 +153,7 @@ namespace BilibiliGirls
 
         private void 自定义右键菜单ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            ContextMenuEditForm f2 = new ContextMenuEditForm();
             if (f2.ShowDialog() == DialogResult.OK)
             {
                 initOpenContextMenu();
@@ -168,7 +168,7 @@ namespace BilibiliGirls
                 label1.Text = Girl.Say();
                 timer.Interval = 1500;
             }
-         
+
         }
     }
 }

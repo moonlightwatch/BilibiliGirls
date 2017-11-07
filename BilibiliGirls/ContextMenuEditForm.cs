@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BilibiliGirls
 {
-    public partial class Form2 : Form
+    public partial class ContextMenuEditForm : Form
     {
-        public Form2()
+        public ContextMenuEditForm()
         {
             InitializeComponent();
         }
