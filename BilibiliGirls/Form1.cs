@@ -72,12 +72,12 @@ namespace BilibiliGirls
                 {
                     Process.Start(fileName);
                 }
-                catch(Exception exc)
+                catch (Exception exc)
                 {
                     return;
                 }
             }
-           
+
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -95,9 +95,12 @@ namespace BilibiliGirls
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            timer.Enabled = false;
-            pictureBox1.Cursor = Cursors.SizeAll;
-            mouseLocation = e.Location;
+            if (e.Button == MouseButtons.Left)
+            {
+                timer.Enabled = false;
+                pictureBox1.Cursor = Cursors.SizeAll;
+                mouseLocation = e.Location;
+            }
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -128,17 +131,7 @@ namespace BilibiliGirls
             }
             label1.Text = "";
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (pictureBox1.Image != Girl.MovingImage)
-            {
-                pictureBox1.Image = Girl.SayingImage;
-                label1.Text = Girl.Say();
-                timer.Interval = 1500;
-            }
-        }
-
+        
         private void 召唤22娘ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Girl = new Girl_22(imageList, rootNode.ChildNodes[0]);
@@ -161,10 +154,21 @@ namespace BilibiliGirls
         private void 自定义右键菜单ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
-            if(f2.ShowDialog()==DialogResult.OK)
+            if (f2.ShowDialog() == DialogResult.OK)
             {
                 initOpenContextMenu();
             }
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && pictureBox1.Image != Girl.MovingImage)
+            {
+                pictureBox1.Image = Girl.SayingImage;
+                label1.Text = Girl.Say();
+                timer.Interval = 1500;
+            }
+         
         }
     }
 }

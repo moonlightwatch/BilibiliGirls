@@ -37,12 +37,12 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.召唤22娘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.召唤33娘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.自定义右键菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.自定义右键菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
@@ -113,6 +113,18 @@
             this.召唤33娘ToolStripMenuItem.Text = "召唤33娘";
             this.召唤33娘ToolStripMenuItem.Click += new System.EventHandler(this.召唤33娘ToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 6);
+            // 
+            // 自定义右键菜单ToolStripMenuItem
+            // 
+            this.自定义右键菜单ToolStripMenuItem.Name = "自定义右键菜单ToolStripMenuItem";
+            this.自定义右键菜单ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.自定义右键菜单ToolStripMenuItem.Text = "自定义右键菜单";
+            this.自定义右键菜单ToolStripMenuItem.Click += new System.EventHandler(this.自定义右键菜单ToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -148,18 +160,6 @@
             // 
             this.timer.Interval = 300;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // 自定义右键菜单ToolStripMenuItem
-            // 
-            this.自定义右键菜单ToolStripMenuItem.Name = "自定义右键菜单ToolStripMenuItem";
-            this.自定义右键菜单ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.自定义右键菜单ToolStripMenuItem.Text = "自定义右键菜单";
-            this.自定义右键菜单ToolStripMenuItem.Click += new System.EventHandler(this.自定义右键菜单ToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 6);
             // 
             // Form1
             // 
