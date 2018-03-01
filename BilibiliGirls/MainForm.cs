@@ -56,7 +56,12 @@ namespace BilibiliGirls
                 List<string> lines = new List<string>(File.ReadAllLines(proFilePath));
                 for (int i = 0; i < lines.Count; i++)
                 {
-                    openContextMenu.Items.Add(lines[i]);
+                    Icon ico = null;
+                    if (File.Exists(lines[i + 1]) && lines[i + 1].EndsWith(".exe"))
+                    {
+                        ico = Icon.ExtractAssociatedIcon(lines[i + 1]);
+                    }
+                    openContextMenu.Items.Add(lines[i], ico.ToBitmap());
                     openContextMenu.Items[openContextMenu.Items.Count - 1].Tag = lines[i + 1];
                     i++;
                 }
