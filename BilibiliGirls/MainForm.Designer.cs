@@ -97,43 +97,47 @@
             this.toolStripMenuItem1,
             this.退出ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 126);
             // 
             // 召唤22娘ToolStripMenuItem
             // 
+            this.召唤22娘ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("召唤22娘ToolStripMenuItem.Image")));
             this.召唤22娘ToolStripMenuItem.Name = "召唤22娘ToolStripMenuItem";
-            this.召唤22娘ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.召唤22娘ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.召唤22娘ToolStripMenuItem.Text = "召唤22娘";
             this.召唤22娘ToolStripMenuItem.Click += new System.EventHandler(this.召唤22娘ToolStripMenuItem_Click);
             // 
             // 召唤33娘ToolStripMenuItem
             // 
+            this.召唤33娘ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("召唤33娘ToolStripMenuItem.Image")));
             this.召唤33娘ToolStripMenuItem.Name = "召唤33娘ToolStripMenuItem";
-            this.召唤33娘ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.召唤33娘ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.召唤33娘ToolStripMenuItem.Text = "召唤33娘";
             this.召唤33娘ToolStripMenuItem.Click += new System.EventHandler(this.召唤33娘ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // 自定义右键菜单ToolStripMenuItem
             // 
+            this.自定义右键菜单ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("自定义右键菜单ToolStripMenuItem.Image")));
             this.自定义右键菜单ToolStripMenuItem.Name = "自定义右键菜单ToolStripMenuItem";
-            this.自定义右键菜单ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.自定义右键菜单ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.自定义右键菜单ToolStripMenuItem.Text = "自定义右键菜单";
             this.自定义右键菜单ToolStripMenuItem.Click += new System.EventHandler(this.自定义右键菜单ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // 退出ToolStripMenuItem
             // 
+            this.退出ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("退出ToolStripMenuItem.Image")));
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -161,7 +165,7 @@
             this.timer.Interval = 300;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,7 +175,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BilibiliGirl";

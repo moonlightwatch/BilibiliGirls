@@ -43,11 +43,11 @@ namespace BilibiliGirls
             召唤22娘ToolStripMenuItem.Visible = false;
             召唤33娘ToolStripMenuItem.Visible = true;
             timer.Enabled = true;
-            initOpenContextMenu();
+            InitOpenContextMenu();
             openContextMenu.ItemClicked += OpenContextMenu_ItemClicked;
         }
 
-        private void initOpenContextMenu()
+        private async void InitOpenContextMenu()
         {
             openContextMenu.Items.Clear();
             string proFilePath = Path.Combine(Application.StartupPath, "Open.txt");
@@ -57,10 +57,26 @@ namespace BilibiliGirls
                 for (int i = 0; i < lines.Count; i++)
                 {
                     Icon ico = null;
-                    if (File.Exists(lines[i + 1]) && lines[i + 1].EndsWith(".exe"))
+                    try
                     {
-                        ico = Icon.ExtractAssociatedIcon(lines[i + 1]);
+                        if (File.Exists(lines[i + 1]) && lines[i + 1].EndsWith(".exe"))
+                        {
+                            ico = Icon.ExtractAssociatedIcon(lines[i + 1]);
+                        }
+                        else if (lines[i + 1].StartsWith("http"))
+                        {
+                            var req = System.Net.WebRequest.CreateHttp(lines[i + 1]);
+                            var icoUrl = string.Format("{0}://{1}/favicon.ico", lines[i + 1].StartsWith("https") ? "https" : "http", req.Host);
+                            var icoReq = System.Net.WebRequest.CreateHttp(icoUrl);
+                            var resp = await icoReq.GetResponseAsync();
+                            MemoryStream ms = new MemoryStream();
+                            resp.GetResponseStream().CopyTo(ms);
+                            ms.Position = 0;
+                            ico = new System.Drawing.Icon(ms);
+                        }
                     }
+                    catch (Exception exc)
+                    { }
                     if (ico == null)
                     {
                         openContextMenu.Items.Add(lines[i]);
@@ -168,7 +184,7 @@ namespace BilibiliGirls
             ContextMenuEditForm f2 = new ContextMenuEditForm();
             if (f2.ShowDialog() == DialogResult.OK)
             {
-                initOpenContextMenu();
+                InitOpenContextMenu();
             }
         }
 
