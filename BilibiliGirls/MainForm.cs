@@ -196,7 +196,6 @@ namespace BilibiliGirls
                 label1.Text = Girl.Say();
                 timer.Interval = 1500;
             }
-
         }
     }
 }
